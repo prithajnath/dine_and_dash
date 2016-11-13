@@ -1,7 +1,9 @@
 <%=image_tag("logo.png", class:"img-fluid")%>
 <% if user_signed_in?%>
 	<p><%= current_user.email%></p>
-	<%= link_to "Logout", destroy_user_session_path, method: :delete, class:"btn btn-secondary"%>
+	<%= link_to "Logout", destroy_user_session_path, method: :delete, class:"btn btn-danger"%>
+	<br>
+	<%= link_to "Get started", category_index_path, class:"btn btn-success" %>
 
 <% else %>
 	<%= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary"%>
@@ -10,4 +12,3 @@
 <% end %>
 <p>Dine & Dash is a mobile app that allows you to meet people at events or activities you want.</p>
 
-<%= link_to "Get started", category_index_path %>
