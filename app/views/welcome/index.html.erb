@@ -1,10 +1,11 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<%=image_tag("logo.png")%>
 <% if user_signed_in?%>
 	<%= current_user.email%>
 	<%= link_to "Logout", destroy_user_session_path, method: :delete%>
 
 <% else %>
-	<%= link_to "Sign Up", new_user_registration_path %>
-	<%= link_to "Log In", new_user_session_path %>
+	<%= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary"%>
+	<br>
+	<%= link_to "Log In", new_user_session_path, class: "btn btn-secondary"%>
 <% end %>
+<p>Dine & Dash is a mobile app that allows you to meet people at events or activities you want.</p>
