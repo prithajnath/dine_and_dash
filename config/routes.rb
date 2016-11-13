@@ -2,6 +2,10 @@ Rails.application.routes.draw do
   devise_for :users
   get 'welcome/index'
 
+  get 'category/index'
+
+  get 'category/cards'
+
 
   root 'welcome#index'
 
