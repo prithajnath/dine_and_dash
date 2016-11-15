@@ -7,7 +7,7 @@ class CategoryController < ApplicationController
 
 
   def cards
-
+    @value = params[:category]
   end
 
 end
