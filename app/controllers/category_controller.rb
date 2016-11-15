@@ -7,7 +7,7 @@ class CategoryController < ApplicationController
 
 
   def cards
-    @value = params[:category]
+    @value = Yelp.client.search('New York', { term: params[:category] })
   end
 
 end

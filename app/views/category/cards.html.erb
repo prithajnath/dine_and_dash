@@ -1,2 +1,5 @@
 <h2>Cards</h2>
-<%= @value %>
+<% @value.instance_values["businesses"].each do |f| %>
+<h4><%=  f.name %></h4>
+<h5><%= f.location.address[0] %>, <%= f.location.city %>, <%= f.location.postal_code %></h5>
+<% end %> 
