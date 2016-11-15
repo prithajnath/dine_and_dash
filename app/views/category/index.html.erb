@@ -1,13 +1,12 @@
-<form>
-    <div class="form-group">
-    <label for="exampleSelect1"><h2>What would you like to do?</h2></label>
- <select multiple class="form-control" id="preference">
-      <option>Sports</option>
-      <option>Restaurants</option>
-      <option>Bar</option>
-      <option>Theatre</option>
-      <option>Cafe</option>
-    </select>
-  </div>
-  <button class="btn btn-success">Dash</button>
-</form>
+<%= form_tag({controller: "category", action: "cards"}, method: "get") do %>
+    <%= radio_button_tag(:category, "sports") %>
+    <%= label_tag(:category, "Sports") %>
+    <%= radio_button_tag(:category, "theatre") %>
+    <%= label_tag(:category, "Theatre") %>
+    <%= radio_button_tag(:category, "cafe") %>
+    <%= label_tag(:category, "Cafe") %>
+    <%= radio_button_tag(:category, "bar") %>
+    <%= label_tag(:category, "Bar") %>
+    <%= submit_tag "Submit" %>
+<% end %>
+
