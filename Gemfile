@@ -33,6 +33,8 @@ gem 'jbuilder', '~> 2.5'
 # User Auth
 gem 'devise', '~> 4.2'
 
+# Profile pictures
+gem 'paperclip', '~> 5.1'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
