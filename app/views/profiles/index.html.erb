@@ -1,3 +1,4 @@
+<div class="jumbotron">
 <%= image_tag @user.profile_pic.url, id: "profile_pic", class:'img-fluid'%>
 <p><%= current_user.email%></p>
 <nav class="navbar navbar-light bg-faded">
@@ -18,4 +19,5 @@
 <h1><%= current_user.first_name%> <%= current_user.last_name%></h1>
 <h3><%= current_user.gender%></h3>
 <br>
+</div>
 <a href="/" class="btn btn-info">Home</a>
