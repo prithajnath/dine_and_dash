@@ -1,6 +1,21 @@
-<%= image_tag @user.profile_pic.url, id: "profile_pic"%>
-<br><br>
+<%= image_tag @user.profile_pic.url, id: "profile_pic", class:'img-fluid'%>
+<p><%= current_user.email%></p>
+<nav class="navbar navbar-light bg-faded">
+    <ul class="nav navbar-nav">
+        <li class="col-md-4">
+            <a class="nav-link" href="#"><i class="fa fa-users fa-2x" aria-hidden="true"></i>
+</a>
+        </li>
+        <li class="col-md-4">
+            <a class="nav-link" href="#"><i class="fa fa-star fa-2x" aria-hidden="true"></i>
+</a>
+        </li>
+        <li class="col-md-4">
+            <%= link_to '<i class="fa fa-cogs fa-2x"></i>'.html_safe, edit_user_registration_path, class:"nav-link" %>
+        </li>
+    </ul>
+</nav>
 <h1><%= current_user.first_name%> <%= current_user.last_name%></h1>
-<h3><%= current_user.email%></h3>
 <h3><%= current_user.gender%></h3>
-<h5><%= link_to "Edit", edit_user_registration_path%></h5>
+<br>
+<a href="/" class="btn btn-info">Home</a>
