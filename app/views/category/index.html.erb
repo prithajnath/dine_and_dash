@@ -1,3 +1,4 @@
+<div class="jumbotron" style="opacity:0.9;">
 <%= form_tag({controller: "category", action: "cards"}, method: "get") do %>
     <%= radio_button_tag(:category, "sports") %>
     <%= label_tag(:category, "Sports") %>
@@ -9,4 +10,4 @@
     <%= label_tag(:category, "Bar") %>
     <%= submit_tag "Submit", class: "btn btn-success" %>
 <% end %>
-
+</div>
