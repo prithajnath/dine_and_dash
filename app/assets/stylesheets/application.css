@@ -74,4 +74,8 @@
       font-size: 32px;
       text-align: center;
      }
+     
+     .form-control {
+       font-size: 48px;
+     }
  }

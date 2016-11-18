@@ -1,5 +1,16 @@
-<h2>Cards</h2>
+<ul>
 <% @value.instance_values["businesses"].each do |f| %>
-<h4><%=  f.name %></h4>
-<h5><%= f.location.address[0] %>, <%= f.location.city %>, <%= f.location.postal_code %></h5>
+<li>
+<div class="card">
+<img src="<%= f.image_url %>" class="img-responsive">
+<div class="card-block">
+<h2 class="card-title"><%=  f.name %></h2>
+<p class="card-text"><%= f.location.address[0] %>, <%= f.location.city %>, <%= f.location.postal_code %></p>
+<img src="<%= f.rating_img_url %>">
+<button type="button" class="btn btn-success">Dine</button>
+<button type="button" class="btn btn-danger">Dash</button>
+</div>
+</div>
+</li>
 <% end %> 
+</ul>
