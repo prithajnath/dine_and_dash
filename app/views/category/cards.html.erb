@@ -1,16 +1,21 @@
+<%= form_tag({controller:"create_matches", action:"index"}, method: "get") do %> 
 <ul>
 <% @value.instance_values["businesses"].each do |f| %>
 <li>
-<div class="card">
-<img src="<%= f.image_url %>" class="img-responsive">
-<div class="card-block">
-<h2 class="card-title"><%=  f.name %></h2>
-<p class="card-text"><%= f.location.address[0] %>, <%= f.location.city %>, <%= f.location.postal_code %></p>
-<img src="<%= f.rating_img_url %>">
-<button type="button" class="btn btn-success">Dine</button>
-<button type="button" class="btn btn-danger">Dash</button>
-</div>
-</div>
+    <div class="card">
+        <img src="<%= f.image_url %>" class="img-responsive">
+        <div class="card-block">
+            <h2 class="card-title"><%=  f.name %></h2>
+            <p class="card-text"><%= f.location.address[0] %>, <%= f.location.city %>, <%= f.location.postal_code %></p>
+            <img src="<%= f.rating_img_url %>">
+            <button type="button" class="btn btn-success">Dine</button>
+            <button type="button" class="btn btn-danger">Dash</button>
+        </div>
+        <%= radio_button_tag(:business, f.id) %>
+        <%= label_tag(:business, f.name) %>
+    </div>
+<% end %>
 </li>
-<% end %> 
 </ul>
+<%= submit_tag "Submit", class: "btn btn-success" %>
+<% end %>
