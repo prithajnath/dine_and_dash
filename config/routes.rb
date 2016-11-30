@@ -9,6 +9,7 @@ Rails.application.routes.draw do
 
   get 'category/cards'
 
+  get 'create_matches/index'
 
   root 'welcome#index'
   
